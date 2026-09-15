@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* 确保暗黑模式与 Element Plus 的 html.dark 联动 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* ================= 全局默认字体 ================= */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* ================= 字体尺寸扩展 (10px / 11px 微排版) ================= */
+  /* 11px: text-2xs 或 text-11 (行高 16px) */
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --text-11: 0.6875rem;
+  --text-11--line-height: 1rem;
+
+  /* 10px: text-3xs 或 text-10 (行高 14px) */
+  --text-3xs: 0.625rem;
+  --text-3xs--line-height: 0.875rem;
+  --text-10: 0.625rem;
+  --text-10--line-height: 0.875rem;
+
+  /* ================= 基础背景体系 ================= */
+  /* 生成类: bg-bg (基础卡片底色), bg-bg-page (页面灰底), bg-bg-overlay (弹窗底色) */
+  --color-bg: var(--el-bg-color);
+  --color-bg-page: var(--el-bg-color-page);
+  --color-bg-overlay: var(--el-bg-color-overlay);
+
+  /* ================= 填充色体系 ================= */
+  /* 生成类: bg-fill, bg-fill-light, bg-fill-lighter, bg-fill-blank */
+  --color-fill: var(--el-fill-color);
+  --color-fill-light: var(--el-fill-color-light);
+  --color-fill-lighter: var(--el-fill-color-lighter);
+  --color-fill-blank: var(--el-fill-color-blank);
+
+  /* ================= 字体颜色体系 ================= */
+  /* 生成类: text-main, text-regular, text-secondary, text-placeholder, text-disabled */
+  --color-main: var(--el-text-color-primary);
+  --color-regular: var(--el-text-color-regular);
+  --color-secondary: var(--el-text-color-secondary);
+  --color-placeholder: var(--el-text-color-placeholder);
+  --color-disabled: var(--el-text-color-disabled);
+
+  /* ================= 边框体系 ================= */
+  /* 生成类: border-border, border-border-light, border-border-lighter */
+  --color-border: var(--el-border-color);
+  --color-border-light: var(--el-border-color-light);
+  --color-border-lighter: var(--el-border-color-lighter);
+
+  /* ================= 主题/功能状态色体系 ================= */
+  /* Primary (支持背景 bg-primary-light-9, 边框 border-primary-light-7 等) */
+  --color-primary: var(--el-color-primary);
+  --color-primary-light-3: var(--el-color-primary-light-3);
+  --color-primary-light-5: var(--el-color-primary-light-5);
+  --color-primary-light-7: var(--el-color-primary-light-7);
+  --color-primary-light-8: var(--el-color-primary-light-8);
+  --color-primary-light-9: var(--el-color-primary-light-9);
+  --color-primary-dark-2: var(--el-color-primary-dark-2);
+
+  /* Success */
+  --color-success: var(--el-color-success);
+  --color-success-light-3: var(--el-color-success-light-3);
+  --color-success-light-5: var(--el-color-success-light-5);
+  --color-success-light-7: var(--el-color-success-light-7);
+  --color-success-light-8: var(--el-color-success-light-8);
+  --color-success-light-9: var(--el-color-success-light-9);
+  --color-success-dark-2: var(--el-color-success-dark-2);
+
+  /* Warning */
+  --color-warning: var(--el-color-warning);
+  --color-warning-light-3: var(--el-color-warning-light-3);
+  --color-warning-light-5: var(--el-color-warning-light-5);
+  --color-warning-light-7: var(--el-color-warning-light-7);
+  --color-warning-light-8: var(--el-color-warning-light-8);
+  --color-warning-light-9: var(--el-color-warning-light-9);
+  --color-warning-dark-2: var(--el-color-warning-dark-2);
+
+  /* Danger */
+  --color-danger: var(--el-color-danger);
+  --color-danger-light-3: var(--el-color-danger-light-3);
+  --color-danger-light-5: var(--el-color-danger-light-5);
+  --color-danger-light-7: var(--el-color-danger-light-7);
+  --color-danger-light-8: var(--el-color-danger-light-8);
+  --color-danger-light-9: var(--el-color-danger-light-9);
+  --color-danger-dark-2: var(--el-color-danger-dark-2);
+
+  /* Info */
+  --color-info: var(--el-color-info);
+  --color-info-light-3: var(--el-color-info-light-3);
+  --color-info-light-5: var(--el-color-info-light-5);
+  --color-info-light-7: var(--el-color-info-light-7);
+  --color-info-light-8: var(--el-color-info-light-8);
+  --color-info-light-9: var(--el-color-info-light-9);
+  --color-info-dark-2: var(--el-color-info-dark-2);
+
+  /* ================= 响应式断点 ================= */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+}
