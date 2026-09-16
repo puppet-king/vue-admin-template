@@ -25,24 +25,6 @@
         <p class="auth-feature__subtitle">
           基于 Vue 3 + TypeScript + Element Plus 构建的企业级微服务管理后台，开箱即用、规范严谨。
         </p>
-        <ul class="auth-feature__highlights">
-          <li>
-            <span>✓</span>
-            前后端双 Token 无感刷新机制与防爆破安全登录
-          </li>
-          <li>
-            <span>✓</span>
-            完善的 RBAC 权限控制体系与动态路由装载
-          </li>
-          <li>
-            <span>✓</span>
-            组件自动导入、深色模式与全套国际化支持
-          </li>
-          <li>
-            <span>✓</span>
-            深度适配 Go 后端微服务与自动化脚手架生态
-          </li>
-        </ul>
       </section>
 
       <!-- 右侧登录面板 -->
@@ -333,31 +315,6 @@ function checkCapsLock(event: KeyboardEvent) {
     font-size: 1rem;
     line-height: 1.7;
     color: var(--auth-subtitle-text);
-  }
-
-  &__highlights {
-    display: grid;
-    gap: 0.75rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    li {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      padding: 0.75rem 1rem;
-      font-weight: 500;
-      color: var(--auth-highlight-text);
-      background: var(--auth-highlight-bg);
-      border: 1px solid var(--auth-highlight-border);
-      border-radius: 12px;
-
-      span {
-        font-size: 0.75rem;
-        color: var(--auth-highlight-accent);
-      }
-    }
   }
 }
 
