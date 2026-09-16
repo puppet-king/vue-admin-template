@@ -326,7 +326,7 @@ import type { IContentConfig, IObject, IOperateData } from './types'
 import type { IToolsButton } from './types'
 
 // Import SVG icons
-const svgIconModules = import.meta.glob('@/assets/icons/*.svg', { as: 'component' })
+const svgIconModules = import.meta.glob('@/assets/icons/*.svg', { query: '?component', import: 'default' })
 function getSvgIcon(name: string) {
   const path = `/src/assets/icons/${name}.svg`
   return svgIconModules[path] || null

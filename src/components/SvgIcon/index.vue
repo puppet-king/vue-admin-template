@@ -10,8 +10,13 @@ const props = defineProps<{
   className?: string
 }>()
 
+const iconModules = import.meta.glob<string>('/src/assets/icons/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+})
+
 const iconContent = computed(() => {
-  const iconModules = import.meta.glob('/src/assets/icons/*.svg', { as: 'raw' })
   const iconPath = `/src/assets/icons/${props.name}.svg`
   return iconModules[iconPath] || ''
 })

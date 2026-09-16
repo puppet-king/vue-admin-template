@@ -144,7 +144,7 @@ const resolvedLucideIcon = computed(() => {
 })
 
 async function loadIcons() {
-  const icons = import.meta.glob('../../assets/icons/*.svg', { as: 'component' })
+  const icons = import.meta.glob<Component>('../../assets/icons/*.svg', { query: '?component', import: 'default' })
   for (const path in icons) {
     const iconName = path.replace(/.*\/(.*)\.svg$/, '$1')
     svgIconMap.value[iconName] = (await icons[path]()) as Component
